@@ -21,9 +21,9 @@ impl MigrationTrait for Migration {
                             .primary_key()
                             .not_null(),
                     )
-                    .col(string_null(Column::StudentId))
-                    .col(string_null(Column::Account))
-                    .col(string(Column::Password).not_null())
+                    .col(string_null(Column::StudentId).unique_key())
+                    .col(string_null(Column::Account).unique_key())
+                    .col(string(Column::PasswordHash).not_null())
                     .col(string_null(Column::Name))
                     .if_not_exists()
                     .to_owned(),

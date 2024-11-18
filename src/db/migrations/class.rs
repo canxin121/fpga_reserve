@@ -2,7 +2,7 @@ use crate::db::models::class::Column;
 use async_trait::async_trait;
 use sea_orm_migration::{
     prelude::*,
-    schema::{big_integer, string},
+    schema::{big_integer, string_null},
 };
 
 #[derive(DeriveMigrationName)]
@@ -21,7 +21,7 @@ impl MigrationTrait for Migration {
                             .primary_key()
                             .not_null(),
                     )
-                    .col(string(Column::ClassId).not_null())
+                    .col(string_null(Column::ClassId))
                     .if_not_exists()
                     .to_owned(),
             )

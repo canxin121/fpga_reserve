@@ -1,4 +1,12 @@
 pub mod class;
 pub mod class_student_junction;
+pub mod class_teacher_junction;
+pub mod experiment;
+pub mod experiment_teacher_junction;
+pub mod experiment_time_ranges;
+pub mod experiment_time_ranges_student_junction;
 pub mod student;
+pub mod student_refresh_token;
 pub mod teacher;
+pub mod teacher_refresh_token;
+pub mod experiment_student_junction;

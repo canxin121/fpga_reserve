@@ -1,8 +1,5 @@
 use async_trait::async_trait;
-use sea_orm_migration::{
-    prelude::*,
-    schema::{big_integer, string},
-};
+use sea_orm_migration::{prelude::*, schema::big_integer};
 
 use crate::db::models::{class, class_student_junction::Column, student};
 
